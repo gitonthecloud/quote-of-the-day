@@ -23,6 +23,6 @@
   - name: push docker tag onto dockerhub
     command: docker push whalingonthecloud/quote-of-the-day
 
-  - name: remove docker images form ansible server
+  - name: remove docker images
     command: docker rmi quote-of-the-day:latest whalingonthecloud/quote-of-the-day
     ignore_errors: yes
