@@ -22,5 +22,12 @@ pipeline {
                 sh './jenkins/scripts/test.sh'
             }
         }
+
+        stage('Deploy') {
+            steps {
+                sh './jenkins/scripts/deploy.sh'
+            }
+        }
+
     }
 }
