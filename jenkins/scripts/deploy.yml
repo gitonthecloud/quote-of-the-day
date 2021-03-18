@@ -1,0 +1,28 @@
+---
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: stop old docker container
+    command: docker stop quote-of-the-day-container
+    ignore_errors: yes
+
+  - name: remove stopped docker container
+    command: docker rm quote-of-the-day-container
+    ignore_errors: yes
+
+  - name: remove current docker image
+    command: docker rmi quote-of-the-day
+    ignore_errors: yes
+
+  - name: building docker image
+    command: docker build -t quote-of-the-day .
+
+  - name: create docker tag from image
+    command: docker tag quote-of-the-day whalingonthecloud/quote-of-the-day
+
+  - name: push docker tag onto dockerhub
+    command: docker push whalingonthecloud/quote-of-the-day
+
+  - name: remove docker images form ansible server
+    command: docker rmi quote-of-the-day:latest whalingonthecloud/quote-of-the-day
+    ignore_errors: yes
