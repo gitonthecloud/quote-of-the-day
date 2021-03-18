@@ -1,0 +1,32 @@
+{
+  "name": "quote_of_the_day",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "nyc mocha --timeout 60000 --exit",
+    "ctest": "jest --detectOpenHandles --coverage --forceExit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "http": "0.0.1-security"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
+    "jest": "^26.6.3",
+    "net": "^1.0.2",
+    "nyc": "^15.1.0",
+    "sinon": "^9.2.4"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  }
+}
