@@ -57,7 +57,7 @@ to maintain a consistent style in the source code.
 
 The source code of the project are version controlled using GitHub. Jenkins is used to create a CI/CD pipeline consisting of the following phases:
 1. Code Checkout
-   Jenkins retrieves project from GitHub repo.
+   Jenkins polls GitHub periodically. If there is any changes, it retrieves the project source code from the repo.
 2. Build
    Jenkins initiates the build of the project. In this case, it is simply ensuring that all dependencies are ready at hand.
 3. Test
