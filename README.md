@@ -6,38 +6,38 @@ Due to time constraint, instead of finding a server that can produce random quot
 The server is located at https://sv443.net/jokeapi/v2/joke.
 
 
-#[Project Structure]
+# Project Structure
 
 The project source code structure is shown below:
 
 quote-of-the-day
 |
-|── coverage
-|── jenkins
-|   |── scripts
-|       |── deploy.sh
-|       |── deploy.yml
-|       |── test.sh
+|-- coverage
+|-- jenkins
+|   |-- scripts
+|       |-- deploy.sh
+|       |-- deploy.yml
+|       |-- test.sh
 |
-|── Jenkinsfile
-|── node_modules
-|── package.json
-|── package-lock.json
-|── src
-|   |── app.js
-|   |── exitHandler.js
-|   |── getQuote.js
-|   |── server.js
+|-- Jenkinsfile
+|-- node_modules
+|-- package.json
+|-- package-lock.json
+|-- src
+|   |-- app.js
+|   |-- exitHandler.js
+|   |-- getQuote.js
+|   |-- server.js
 |
-|── test
-    |── app.test.js
-    |── getQuote.test.js
-    |── server.test.js
+|-- test
+    |-- app.test.js
+    |-- getQuote.test.js
+    |-- server.test.js
 
 Some of these directories and hidden files are excluded in the ".gitignore" file.
 
 
-#[Testing]
+# Testing
 
 Test cases are stored in the "test" directory; this faciliatate the use of globally installed mocha. Each test file is also named in the <module>.test.js
 format to facilitate the use of Jest. A test suite is created in an individual file for the corresponding source file in the "src" directory
@@ -53,13 +53,13 @@ The coverage test results showed that there are some untested areas. Other test 
 test code. Future enhancements should include the completion of these outstanding tasks.
 
 
-#[Coding]
+# Coding 
 
 VSCode is used as the development environment for the project. The "prettier" library and the "auto format on save" feature of VSCode were used together
 to maintain a consistent style in the source code.
 
 
-#[Continuous Integration (CI) / Continuous Deployment]
+# Continuous Integration (CI) / Continuous Deployment
 
 The source code of the project are version controlled using GitHub. Jenkins is used to create a CI/CD pipeline consisting of the following phases:
 1. Code Checkout
@@ -85,7 +85,7 @@ The source code of the project are version controlled using GitHub. Jenkins is u
 Note that step 8 to step 10 of the Deploy phase have not been completed yet.
 
 
-[Future Enhancements / Bug fix Tasks]
+# Future Enhancements / Bug fix Tasks 
 
 1. Consider using NODE_ENV
 2. Consider creating a env var module to read environment variables, and use this in other modules
