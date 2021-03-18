@@ -10,28 +10,7 @@ The server is located at https://sv443.net/jokeapi/v2/joke.
 
 The project source code structure is shown below:
 
-quote-of-the-day
- |-- coverage
- |-- jenkins
- |   |-- scripts
- |       |-- deploy.sh
- |       |-- deploy.yml
- |       |-- test.sh
- |
- |-- Jenkinsfile
- |-- node_modules
- |-- package.json
- |-- package-lock.json
- |-- src
- |   |-- app.js
- |   |-- exitHandler.js
- |   |-- getQuote.js
- |   |-- server.js
- |
- |-- test
-     |-- app.test.js
-     |-- getQuote.test.js
-     |-- server.test.js
+![Project Structure](source_code_structure.png)
 
 Some of these directories and hidden files are excluded in the ".gitignore" file.
 
