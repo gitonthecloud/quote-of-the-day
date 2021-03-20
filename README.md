@@ -1,9 +1,13 @@
 # quote-of-the-day
-A simple server that returns a random quote upon each request.
+A simple server that returns a random quote upon each request. The server runs on port 4500 by default.
 
 NOTE:
 Due to time constraint, instead of finding a server that can produce random quotes, a server that produces random joke of the day is used.
 The server is located at https://sv443.net/jokeapi/v2/joke.
+
+Example:
+* Request: http://localhost:4500
+* Response: Being a self-taught developer is almost the same as being a cut neck chicken because you have no sense of direction in the beginning.
 
 
 # Project Structure
