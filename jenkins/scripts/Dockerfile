@@ -17,7 +17,7 @@ USER node
 RUN npm install
 
 # bundle app source, with user node
-COPY --chown node:node ./src/* /home/quote-of-the-day/
+COPY --chown=node:node ./src/* /home/quote-of-the-day/
 
 # expose port 4500 of container
 EXPOSE 4500
