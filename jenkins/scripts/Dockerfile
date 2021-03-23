@@ -5,7 +5,7 @@ From node:14-alpine
 RUN mkdir -p /home/quote-of-the-day && chown -R node:node /home/quote-of-the-day
 
 # set working directory
-WORKDIR /var/lib/jenkins/workspace/quote-of-the-day-pipeline
+WORKDIR /home/quote-of-the-day
 
 # install app dependencies
 COPY package.json /home/quote-of-the-day/
