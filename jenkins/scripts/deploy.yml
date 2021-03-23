@@ -15,7 +15,7 @@
     ignore_errors: yes
 
   - name: building and tagging docker image
-    command: docker build -t whalingonthecloud/quote-of-the-day ../..
+    command: docker build -f ./Dockerfile -t whalingonthecloud/quote-of-the-day ../..
 
   #- name: create docker tag from image
   #  command: docker tag quote-of-the-day whalingonthecloud/quote-of-the-day
