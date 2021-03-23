@@ -24,7 +24,7 @@ pipeline {
         }
 
         stage('Deploy') {
-            steps {
+        		withDockerRegistry([ credentialsId: "whalingonthecloud", url: "" ]) {
                 sh './jenkins/scripts/deploy.sh'
             }
         }
