@@ -5,10 +5,10 @@ From node:14-alpine
 RUN mkdir -p /home/quote-of-the-day && chown -R node:node /home/quote-of-the-day
 
 # set working directory
-WORKDIR /home/quote-of-the-day
+WORKDIR /var/lib/jenkins/workspace/quote-of-the-day-pipeline
 
 # install app dependencies
-COPY ./package*.json /home/quote-of-the-day/
+COPY package.json /home/quote-of-the-day/
 
 # switch to user node to ensure all files are owned by node before running npm install 
 USER node
