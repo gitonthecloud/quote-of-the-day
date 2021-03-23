@@ -1,6 +1,7 @@
 ---
 - hosts: localhost
   connection: local
+  become: ansadmin
   tasks:
   - name: stop old docker container
     command: docker stop quote-of-the-day-container
