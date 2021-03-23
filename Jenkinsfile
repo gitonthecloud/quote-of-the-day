@@ -23,11 +23,12 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
-        		withDockerRegistry([ credentialsId: "whalingonthecloud", url: "" ]) {
-                sh './jenkins/scripts/deploy.sh'
+				stage('Deploy') {
+            steps {
+                withCredentials([usernamePassword( credentialsId: 'whalingonthecloud', usernameVariable: 'USER', passwordVariable: 'PASSWORD')]) {
+                    sh 'docker login -u $USER -p $PASSWORD; ./jenkins/scripts/deploy.sh'
+                }
             }
         }
-
     }
 }
