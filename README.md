@@ -44,13 +44,13 @@ to maintain a consistent style in the source code.
 # Continuous Integration (CI) / Continuous Deployment
 
 The source code of the project are version controlled using GitHub. Jenkins is used to create a CI/CD pipeline consisting of the following phases:
-1. Code Checkout
+1. Code Checkout  
    Jenkins polls GitHub periodically. If there is any changes, it retrieves the project source code from the repo.
-2. Build
+2. Build  
    Jenkins initiates the build of the project. In this case, it is simply ensuring that all dependencies are ready at hand.
-3. Test
-	 Jenkins invokes a test script to run tests.
-4. Deploy
+3. Test  
+   Jenkins invokes a test script to run tests.
+5. Deploy  
    Jenkins invokes a deploy script to deploy the app. A number of different tools are used, namely, Ansible, Docker, DockerHub, Kubernetes, AWS.
    The deployment procedure consists of:
 	 1. Stop running docker containers
